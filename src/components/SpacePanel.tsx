@@ -66,7 +66,7 @@ export function SpacePanel({ events, onSelect, onClose }: Props) {
     let disposed = false
     let chart: ChartInstance | null = null
 
-    fetch('/china.json')
+    fetch(`${import.meta.env.BASE_URL}china.json`)
       .then((r) => r.json())
       .then((geoJson) => {
         if (disposed) return
